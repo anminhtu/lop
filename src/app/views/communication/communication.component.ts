@@ -1,12 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,AfterContentInit } from '@angular/core';
 import { Message, User, SendMessageEvent } from '@progress/kendo-angular-conversational-ui';
+declare var jQuery: any;
 
 @Component({
   selector: 'app-communication',
   templateUrl: './communication.component.html',
   styleUrls: ['./communication.component.scss']
 })
-export class CommunicationComponent implements OnInit {
+export class CommunicationComponent implements OnInit,AfterContentInit {
+  height:number=200;
   public readonly user: User = {
     id: 1
   };
@@ -29,4 +31,11 @@ export class CommunicationComponent implements OnInit {
   ngOnInit() {
   }
 
+  ngAfterContentInit() {
+    var self = this;
+    self.height=jQuery(window).height()-160;
+    jQuery(window).resize(function () {
+      self.height=jQuery(window).height()-160;
+    });
+  }
 }

@@ -3,46 +3,57 @@
       <li class="breadcrumb-item">Communication</li>
     </ol>
   </nav>
-  <div class="content">
-    <div class="row">
-      <div class="col-sm-4">
-        <h6>Contacts</h6>        
-        <ul>     
-            <li style="line-height: 40px">
-                <a>Physician Group 1</a>
-            </li>
-            <li style="line-height: 40px">
-                <a>Physician Group 2</a>
-            </li>
-            <li style="line-height: 40px">
-                    <a>Physician Group 3</a>
-                </li>
-            <li style="line-height: 40px">
-                <a>Physician 1</a>
-            </li>
-            <li style="line-height: 40px">
-                <a>Physician 2</a>
-            </li>
-            <li style="line-height: 40px">
-                <a>Physician 3</a>
-            </li>
-            <li style="line-height: 40px">
-                <a>Physician 4</a>
-            </li>
-            <li style="line-height: 40px">
-                <a>Physician 5</a>
-            </li>            
-
-        </ul>
-      </div>
-      <div class="col-sm-8">
-          <h6>Physician Group 1</h6>
-          <kendo-chat style="width: 100%;"
+  <div class="content">    
+    <div class="row no-gutters">
+      <div class="col-sm-12">    
+        <kendo-splitter>      
+            <kendo-splitter-pane  [collapsible]="true" size="30%">
+                <div class="pane-content">                
+                    <div class="card border-0">
+                        <div class="card-header">
+                            <strong>CONTACTS</strong>
+                        </div>
+                        <ul class="list-group list-group-flush" [style.height.px]="height" style="overflow-y: auto">
+                            <a  class="list-group-item list-group-item-action">Physician Group 1</a>
+                            <a  class="list-group-item list-group-item-action">Physician Group 2</a>
+                            <a  class="list-group-item list-group-item-action">Physician Group 3</a>
+                            <a  class="list-group-item list-group-item-action">Physician Group 4</a>
+                            <a  class="list-group-item list-group-item-action active">Physician Group 5</a>
+                            <a  class="list-group-item list-group-item-action">Physician Group 6</a>
+                            <a  class="list-group-item list-group-item-action">Physician Group 7</a>
+                            <a  class="list-group-item list-group-item-action">Physician Group 8</a>
+                            <a  class="list-group-item list-group-item-action">Physician Group 9</a>
+                            <a  class="list-group-item list-group-item-action">Physician Group 10</a>
+                            <a  class="list-group-item list-group-item-action">Physician Group 11</a>
+                            <a  class="list-group-item list-group-item-action">Physician Group 12</a>
+                            <a  class="list-group-item list-group-item-action">Physician Group 13</a>
+                            <a  class="list-group-item list-group-item-action">Physician Group 14</a>
+                            <a  class="list-group-item list-group-item-action">Physician Group 15</a>
+                            <a  class="list-group-item list-group-item-action">Physician Group 16</a>
+                            <a  class="list-group-item list-group-item-action">Physician Group 17</a>
+                            <a  class="list-group-item list-group-item-action">Physician Group 18</a>
+                            <a  class="list-group-item list-group-item-action">Physician Group 19</a>
+                            <a  class="list-group-item list-group-item-action">Physician Group 20</a>
+                        </ul>
+                    </div>
+                </div>
+            </kendo-splitter-pane>
+            <kendo-splitter-pane>
+                <div class="pane-content">                             
+                    <div class="card border-0">
+                        <div class="card-header">
+                            <strong>Physician Group 5</strong>
+                        </div>
+                        <kendo-chat [style.height.px]="height" style="max-width:100%;width: 100%;"
             [messages]="messages"
             [user]="user"
             (sendMessage)="sendMessage($event)"
             >
             </kendo-chat>
+                    </div>
+                </div>
+            </kendo-splitter-pane>
+        </kendo-splitter>
       </div>
     </div>    
   </div>

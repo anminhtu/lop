@@ -5,7 +5,7 @@
                 <strong>Communication</strong>
             </div>
             <div class="card-body p-0">
-                <kendo-chat style="max-width:100%;" [messages]="messages" [user]="user" (sendMessage)="sendMessage($event)">
+                <kendo-chat style="max-width:100%;height:300px;" [messages]="messages" [user]="user" (sendMessage)="sendMessage($event)">
                         </kendo-chat>
             </div>
         </div>
@@ -15,7 +15,7 @@
             <div class="card-header">
                 <strong>Notes</strong>
             </div>
-            <ul class="list-group list-group-flush">
+            <ul class="list-group list-group-flush" style="height:260px;overflow-y: auto;">
                 <li class="list-group-item" *ngFor="let item of dataNote"><i>{{ item.DateTime }}</i>: {{ item.Content }}</li>
             </ul>
             <div class="card-footer text-muted p-0">
