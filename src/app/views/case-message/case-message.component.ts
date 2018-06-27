@@ -40,6 +40,7 @@ export class CaseMessageComponent implements OnInit {
       {Id: 3, DateTime: "06/18/2018 8:50 AM", Content: "Content 3"},
       {Id: 4, DateTime: "06/22/2018 8:50 AM", Content: "Content 4"},
       {Id: 5, DateTime: "06/25/2018 8:50 AM", Content: "Content 5"},
+      {Id: 5, DateTime: "06/25/2018 8:50 AM", Content: "Content 6"},
     ];
   }
   sendNote(){
