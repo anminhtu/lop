@@ -9,7 +9,6 @@ import { AvailableCaseComponent } from './views/available-case/available-case.co
 import { MyCaseComponent } from './views/my-case/my-case.component';
 import { AvailableCaseDetailComponent } from './views/available-case-detail/available-case-detail.component';
 import { MyCaseDetailComponent } from './views/my-case-detail/my-case-detail.component';
-import { CommunicationComponent } from './views/communication/communication.component';
 
 export const routes: Routes = [
     { path: 'dashboard', component: DashboardComponent },
@@ -17,7 +16,6 @@ export const routes: Routes = [
     { path: 'my-case', component: MyCaseComponent },
     { path: 'available-case-detail', component: AvailableCaseDetailComponent },
     { path: 'my-case-detail', component: MyCaseDetailComponent },
-    { path: 'communication', component: CommunicationComponent },    
     { path: 'user', component: UserComponent },
     { path: 'user/add', component: UserCreateComponent },
     { path: 'user/update/:id', component: UserUpdateComponent },
