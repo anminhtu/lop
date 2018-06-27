@@ -1,14 +1,22 @@
 <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item">
-      <a [routerLink]="['/available-case']">Case</a>
-    </li>
-    <li class="breadcrumb-item active" aria-current="page">001</li>
-  </ol>
-  <div style="text-align: right; padding: 20px;">
-      <button class="btn btn-primary" style="margin-right: 5px;">Approved</button>
-      <button class="btn btn-danger">Rejected</button>
+  <div class="row">
+    <div class="col-md-6" style="padding: 0px;">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a [routerLink]="['/available-case']">Case</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">001</li>
+          </ol>
+    </div>
+    <div class="col-md-6" style="background-color: #e9ecef;">
+        <div style="text-align: right; margin-top: 5px;">
+            <button class="btn btn-primary" style="margin-right: 5px;">Approved</button>
+            <button class="btn btn-danger">Rejected</button>
+        </div>
+    </div>
   </div>
+  
+  
 </nav>
 <div class="content">
   <form name="formBase">
