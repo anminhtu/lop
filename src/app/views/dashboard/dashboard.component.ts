@@ -1,18 +1,20 @@
-import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
+import { Component, OnInit, ViewChild, TemplateRef,AfterContentInit } from '@angular/core';
 import { GridComponent } from 'src/views/shared/grid/grid.component';
+declare var jQuery: any;
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit ,AfterContentInit{
   gridAvailbleDataSource: any;
   availableItems: any[] = [];
   gridAvailbleColumns: any[] = [];
   gridMyDataSource: any;
   myItems: any[] = [];
   gridMyColumns: any[] = [];
+  heightGrid:number=200;
   @ViewChild('actionAvailble') actionAvailble: TemplateRef<any>;
   @ViewChild('patientDetail') patientDetail: TemplateRef<any>;
   @ViewChild('actionMy') actionMy: TemplateRef<any>;
@@ -58,6 +60,13 @@ export class DashboardComponent implements OnInit {
       data: this.myItems,
       total: this.myItems.length
     };
+  }
+  ngAfterContentInit() {
+    var self = this;
+    self.heightGrid=jQuery(window).height()-192;
+    jQuery(window).resize(function () {
+      self.heightGrid=jQuery(window).height()-192;
+    });
   }
 
 }

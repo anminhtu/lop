@@ -4,16 +4,28 @@
   </ol>
 </nav>
 <div class="content">
-  <div class="row">
+  <div class="row no-gutters">
     <div class="col-sm-6">
-      <h6>Availble Case</h6>
-      <pt-grid [inputUseHeaderDefault]="false" [inputPageable]="false" [inputUseActionDefault]="false" [inputGridDataSource]="gridAvailbleDataSource"
-        [inputGridColumns]="gridAvailbleColumns" inputMasterName="Availble"></pt-grid>
+        <div class="card bg-success m-3">
+            <div class="card-header">
+                <strong>Availble Case</strong>
+            </div>
+            <div class="card-body p0">
+                <pt-grid [inputUseHeaderDefault]="false" [inputPageable]="false" [inputUseActionDefault]="false" [inputGridDataSource]="gridAvailbleDataSource"
+                      [inputGridColumns]="gridAvailbleColumns" inputMasterName="Availble" [inputHeight]="heightGrid"></pt-grid>
+            </div>
+        </div>
     </div>
     <div class="col-sm-6">
-        <h6>My Case</h6>
-        <pt-grid [inputUseHeaderDefault]="false" [inputPageable]="false" [inputUseActionDefault]="false" [inputGridDataSource]="gridMyDataSource"
-          [inputGridColumns]="gridMyColumns" inputMasterName="My"></pt-grid>
+        <div class="card text-white bg-info mt-3 mr-3">
+            <div class="card-header">
+                <strong>My Case</strong>
+            </div>
+            <div class="card-body p0">
+                <pt-grid [inputUseHeaderDefault]="false" [inputPageable]="false" [inputUseActionDefault]="false" [inputGridDataSource]="gridMyDataSource"
+                      [inputGridColumns]="gridMyColumns" inputMasterName="My" [inputHeight]="heightGrid"></pt-grid>
+            </div>
+        </div>
     </div>
   </div>
   <ng-template #patientDetail let-dataItem>

@@ -13,7 +13,7 @@ declare var bootbox:any;
   encapsulation: ViewEncapsulation.None
 })
 export class GridComponent implements OnInit, AfterContentInit{
-  height:number=200;
+  height:number;
   gridDataSource:any;
   gridColumns:any[]=[];
   skip: number=0;
@@ -38,6 +38,7 @@ export class GridComponent implements OnInit, AfterContentInit{
   @Input() inputUseHeaderDefault: boolean=true;
   @Input() inputUseActionDefault: boolean=true;
   @Input() inputPageable: boolean=true;
+  @Input() inputHeight: number;
   
   
   @Output() extOnDataBound = new EventEmitter<any>();
@@ -60,13 +61,17 @@ export class GridComponent implements OnInit, AfterContentInit{
     this.skip = 0;
     this.take = (this.pageSize * this.skip) + this.pageSize;
     this.pageable=this.inputPageable;
+    this.height=this.inputHeight;
   }
   ngAfterContentInit() {
     var self = this;
-    self.height=jQuery(window).height()-108;
-    jQuery(window).resize(function () {
+    if(this.inputHeight==null)
+    {
       self.height=jQuery(window).height()-108;
-    });
+      jQuery(window).resize(function () {
+        self.height=jQuery(window).height()-108;
+      });
+    }
     this.setDataSource();
   }
   getCellWidthAuto(width:any,minWidth:any){
