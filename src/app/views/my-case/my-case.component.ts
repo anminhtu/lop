@@ -15,23 +15,26 @@ export class MyCaseComponent implements OnInit {
 
   ngOnInit() {
     this.gridColumns=[
-      {Field:"No",Title:"No.",MinWidth:100},
-      {Field:"PatientName",Title:"Patient Name",MinWidth:100},
-      {Field:"Gender",Title:"Gender",Width:150},
-      {Field:"Age",Title:"Age",Width:250},
-      {Field:"Address",Title:"Address",Width:250},
-      {Field:"DrugName",Title:"Drug Name",Width:250},
-      {Field:"OrderDate",Title:"Order Date",Width:250},
+      {Field:"No",Title:"No.",Width:50},
+      {Field:"CaseNumber",Title:"Case Number",Width:140},
+      {Field:"FirstName",Title:"First Name",MinWidth:70},
+      {Field:"LastName",Title:"Last Name",MinWidth:70},
+      {Field:"Gender",Title:"Gender",Width:80},
+      {Field:"Age",Title:"Age",Width:100},
+      {Field:"Address",Title:"Address",Width:200},
+      {Field:"DrugName",Title:"Drug Name",MinWidth:250},
+      {Field:"OrderDate",Title:"Order Date",Width:120},
+      {Field:"Status",Title:"Status",MinWidth:250},
       {Field:"Active",Title:"",Width:105,Template:this.actionActiveTemplate}
     ];
     this.items=[
-      {Id:1,No: "1",PatientName:"Will",Gender:"Male",Age:"50", Address: "Houston", DrugName: "Drug 1", OrderDate: "05/24/2018 8:50 am"},
-      {Id:1,No: "2",PatientName:"Will",Gender:"Male",Age:"50", Address: "Houston", DrugName: "Drug 1", OrderDate: "05/24/2018 8:50 am"},
-      {Id:1,No: "3",PatientName:"Will",Gender:"Male",Age:"50", Address: "Houston", DrugName: "Drug 1", OrderDate: "05/24/2018 8:50 am"},
-      {Id:1,No: "4",PatientName:"Will",Gender:"Male",Age:"50", Address: "Houston", DrugName: "Drug 1", OrderDate: "05/24/2018 8:50 am"},
-      {Id:1,No: "5",PatientName:"Will",Gender:"Male",Age:"50", Address: "Houston", DrugName: "Drug 1", OrderDate: "05/24/2018 8:50 am"},
-      {Id:1,No: "6",PatientName:"Will",Gender:"Male",Age:"50", Address: "Houston", DrugName: "Drug 1", OrderDate: "05/24/2018 8:50 am"},
-      {Id:1,No: "7",PatientName:"Will",Gender:"Male",Age:"50", Address: "Houston", DrugName: "Drug 1", OrderDate: "05/24/2018 8:50 am"},
+      {Id:1,No: "1", CaseNumber: "LOP000001",FirstName:"Tom", LastName: "Riddle",Gender:"Male",Age:"50", Address: "Houston", DrugName: "Hair loss", OrderDate: "05/24/2018", Status: "Waiting for patient to respond"},
+      {Id:1,No: "2", CaseNumber: "LOP000002",FirstName:"Tom", LastName: "Riddle",Gender:"Male",Age:"35", Address: "Houston", DrugName: "PE_ED", OrderDate: "05/24/2018", Status: "Patient responsed"},
+      {Id:1,No: "3", CaseNumber: "LOP000003",FirstName:"Tom", LastName: "Riddle",Gender:"Male",Age:"25", Address: "Houston", DrugName: "Hair loss", OrderDate: "05/24/2018", Status: "Accepted"},
+      {Id:1,No: "4", CaseNumber: "LOP000004",FirstName:"Tom", LastName: "Riddle",Gender:"Male",Age:"15", Address: "Houston", DrugName: "Cold Sore", OrderDate: "05/24/2018", Status: "Completed"},
+      {Id:1,No: "5", CaseNumber: "LOP000005",FirstName:"Tom", LastName: "Riddle",Gender:"Male",Age:"28", Address: "Houston", DrugName: "Cold Sore", OrderDate: "05/24/2018", Status: "Waiting for patient to respond"},
+      {Id:1,No: "6", CaseNumber: "LOP000006",FirstName:"Tom", LastName: "Riddle",Gender:"Male",Age:"46", Address: "Houston", DrugName: "Cold Sore", OrderDate: "05/24/2018", Status: "Patient responsed"},
+      {Id:1,No: "7", CaseNumber: "LOP000007",FirstName:"Tom", LastName: "Riddle",Gender:"Male",Age:"50", Address: "Houston", DrugName: "Hair loss", OrderDate: "05/24/2018", Status: "Patient responsed"},
 
     ];
     this.gridDataSource={

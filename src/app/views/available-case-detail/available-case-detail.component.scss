@@ -1,3 +1,19 @@
 .warningText {
     background-color: lightsalmon;
 }
+.my-card {
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 10px;
+    box-shadow: -3px -3px 5px #e0e0e0;
+}
+.my-card-header {
+    margin: 0 15px;
+    padding: 10px 0;
+    font-size: 20px;
+    border-bottom: 1px solid rgba(0,0,0,.05);
+}
+
+.my-card-body {
+    margin: 0 15px;
+}
