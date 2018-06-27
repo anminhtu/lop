@@ -7,20 +7,15 @@
   </ol>
 </nav>
 <div class="content">
-  <form name="formBase" class="form-base">
-    <div class="card">
-      <div class="card-header">
-        Drug Name
-      </div>
-      <div class="card-body">
-          <div class="row">
-              <div class="col-md-6">
-                <div class="my-card ">
-                  <div class="my-card-header">
-                    <p style="margin-bottom: 0px;">Drug: XHair</p>
+  <form name="formBase">    
+      <div class="row no-gutters">
+          <div class="col-md-6">
+              <div class="card m-3">
+                  <div class="card-header">
+                      <strong>Drug: XHair</strong>
                   </div>
-                  <div class="my-card-body">
-                    <p style="margin-left: 10px; margin-bottom: 0px;">Duration: 12 month</p>
+                  <div class="card-body">
+                      <p style="margin-left: 10px; margin-bottom: 0px;">Duration: 12 month</p>
                     <p style="margin-left: 10px; margin-bottom: 0px;">Condition:</p>
                     <ul>
                       <li>Age over 25 under 66</li>
@@ -28,43 +23,45 @@
                       <li>Weight: Over 90 lbs</li>
                     </ul>
                   </div>
-                </div>
               </div>
-              <div class="col-md-6">
-                <div class="my-card">
-                  <div class="my-card-header">
-                    <p style="margin-bottom: 0px;">Patient Information:</p>
-                  </div>
-                  <div class="my-card-body">
-                    <ul>
-                      <li>Full name: Tom Ridder</li>
-                      <li>Address: Houston</li>
-                      <li>Phone: 016-2547-2658</li>
-                      <li>Age: 25</li>
-                      <li>Email: abc@caminos.com</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-    
-            </div>
-
-        <div style="display: inline-block; width: 100%">
-          <h5 style="width: fit-content; float: left;">Questionnaire</h5>
-          <div class="k-form-field" style="margin-top: 3px;">
-            <input type="checkbox" id="ch1" class="k-checkbox" name="ch1" [(ngModel)]="isWarningChecked" (change)="checkWarning()" />
-            <label class="k-checkbox-label" for="ch1" style="margin-left: 8px">Warning</label>
           </div>
-        </div>
+          <div class="col-md-6">
+              <div class="card mt-3 mr-3">
+                  <div class="card-header">
+                      <strong>Patient Information</strong>
+                  </div>
+                  <div class="card-body">
+                      <ul>
+                          <li>Full name: Tom Ridder</li>
+                          <li>Address: Houston</li>
+                          <li>Phone: 016-2547-2658</li>
+                          <li>Age: 25</li>
+                          <li>Email: abc@caminos.com</li>
+                        </ul>
+                  </div>
+              </div>
+          </div>
 
-        <pt-grid [inputUseHeaderDefault]="false" [inputPageable]="false" [inputUseActionDefault]="false" [inputGridDataSource]="gridDataSource"
-          [inputGridColumns]="gridColumns" inputMasterName="Question" (extOnPageChange)="onPageChange($event)"></pt-grid>
-        <ng-template #detailTemplate let-dataItem>
-          <p>{{dataItem.Question}}</p>
-          <span [ngClass]="{'warningText': dataItem.IsWaring}">{{dataItem.Answer}}</span>
-        </ng-template>
-      </div>
-    </div>
+          <div class="col-md-12">  
+              <div class="card mr-3 ml-3 mb-3">
+                  <div class="card-header">
+                      <strong>Questionnaire</strong>
+                      <div class="k-form-field" style="display:inline;float:right;">
+                          <input type="checkbox" id="ch1" class="k-checkbox" name="ch1" [(ngModel)]="isWarningChecked" (change)="checkWarning()" />
+                          <label class="k-checkbox-label" for="ch1" style="margin-left: 8px">Warning</label>
+                        </div>
+                  </div>
+                  <div class="card-body p0">                     
+                    <pt-grid [inputUseHeaderDefault]="false" [inputPageable]="false" [inputUseActionDefault]="false" [inputGridDataSource]="gridDataSource"
+                    [inputGridColumns]="gridColumns" inputMasterName="Question" (extOnPageChange)="onPageChange($event)"  inputHeight="auto"></pt-grid>
+                  <ng-template #detailTemplate let-dataItem>
+                    <p>{{dataItem.Question}}</p>
+                    <span [ngClass]="{'warningText': dataItem.IsWaring}">{{dataItem.Answer}}</span>
+                  </ng-template>
+                  </div>
+              </div>                
+            </div>
+        </div>
 
   </form>
 </div>

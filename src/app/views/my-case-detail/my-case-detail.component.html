@@ -7,72 +7,63 @@
   </ol>
 </nav>
 <div class="content">
-  <form name="formBase" class="form-base">
-    <div class="card">
-      <div class="card-header">
-
-      </div>
-      <div class="card-body">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="my-card ">
-              <div class="my-card-header">
-                <p style="margin-bottom: 0px;">Drug: XHair</p>
-              </div>
-              <div class="my-card-body">
-                <p style="margin-left: 10px; margin-bottom: 0px;">Duration: 12 month</p>
-                <p style="margin-left: 10px; margin-bottom: 0px;">Condition:</p>
-                <ul>
-                  <li>Age over 25 under 66</li>
-                  <li>Gender: Male</li>
-                  <li>Weight: Over 90 lbs</li>
-                </ul>
-              </div>
+  <form name="formBase">
+    <div class="row no-gutters">
+        <div class="col-md-6">
+            <div class="card m-3">
+                <div class="card-header">
+                    <strong>Drug: XHair</strong>
+                </div>
+                <div class="card-body">
+                    <p style="margin-left: 10px; margin-bottom: 0px;">Duration: 12 month</p>
+                  <p style="margin-left: 10px; margin-bottom: 0px;">Condition:</p>
+                  <ul>
+                    <li>Age over 25 under 66</li>
+                    <li>Gender: Male</li>
+                    <li>Weight: Over 90 lbs</li>
+                  </ul>
+                </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="my-card">
-              <div class="my-card-header">
-                <p style="margin-bottom: 0px;">Patient Information:</p>
-              </div>
-              <div class="my-card-body">
-                <ul>
-                  <li>Full name: Tom Ridder</li>
-                  <li>Address: Houston</li>
-                  <li>Phone: 016-2547-2658</li>
-                  <li>Age: 25</li>
-                  <li>Email: abc@caminos.com</li>
-                </ul>
-              </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mt-3 mr-3">
+                <div class="card-header">
+                    <strong>Patient Information</strong>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li>Full name: Tom Ridder</li>
+                        <li>Address: Houston</li>
+                        <li>Phone: 016-2547-2658</li>
+                        <li>Age: 25</li>
+                        <li>Email: abc@caminos.com</li>
+                      </ul>
+                </div>
             </div>
+        </div>
+        
+        <div class="col-md-12">  
+            
+        <kendo-tabstrip class="mr-3 ml-3 mb-3">
+            <kendo-tabstrip-tab name="tab1" [title]="'Questionnaire'" [selected]="true">
+              <ng-template kendoTabContent>
+                <app-case-question></app-case-question>
+              </ng-template>
+            </kendo-tabstrip-tab>
+            <kendo-tabstrip-tab name="tab2" [title]="'Photos'">
+              <ng-template kendoTabContent>
+                <app-case-photo></app-case-photo>
+              </ng-template>
+            </kendo-tabstrip-tab>
+            <kendo-tabstrip-tab name="tab3" [title]="'Communication'" style="overflow-x:hidden; ">
+              <ng-template kendoTabContent>
+                <app-case-message></app-case-message>
+              </ng-template>
+            </kendo-tabstrip-tab>
+          </kendo-tabstrip>
+              
           </div>
-
-        </div>
-
-        <div>
-          <!-- <p>Allergies: abc, def, ghj</p> -->
-        </div>
-
-        <kendo-tabstrip>
-          <kendo-tabstrip-tab name="tab1" [title]="'Questionnaire'" [selected]="true">
-            <ng-template kendoTabContent>
-              <app-case-question></app-case-question>
-            </ng-template>
-          </kendo-tabstrip-tab>
-          <kendo-tabstrip-tab name="tab2" [title]="'Photos'">
-            <ng-template kendoTabContent>
-              <app-case-photo></app-case-photo>
-            </ng-template>
-          </kendo-tabstrip-tab>
-          <kendo-tabstrip-tab name="tab3" [title]="'Communication'" style="overflow-x:hidden; ">
-            <ng-template kendoTabContent>
-              <app-case-message></app-case-message>
-            </ng-template>
-          </kendo-tabstrip-tab>
-        </kendo-tabstrip>
-
-      </div>
-    </div>
+    </div>   
 
   </form>
 </div>

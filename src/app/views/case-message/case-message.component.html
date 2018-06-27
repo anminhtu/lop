@@ -1,25 +1,32 @@
-<div class="row">
+<div class="row no-gutters">
     <div class="col-sm-8">
-        <div class="k-card">
-            <h5>Communication</h5>
-            <kendo-chat style="width: 100%;" [messages]="messages" [user]="user" (sendMessage)="sendMessage($event)">
-            </kendo-chat>
+        <div class="card mt-2 mr-2 mb-2">
+            <div class="card-header">
+                <strong>Communication</strong>
+            </div>
+            <div class="card-body p-0">
+                <kendo-chat style="max-width:100%;" [messages]="messages" [user]="user" (sendMessage)="sendMessage($event)">
+                        </kendo-chat>
+            </div>
         </div>
     </div>
     <div class="col-sm-4">
-        <div class="k-card">
-            <h5>Notes</h5>
-        </div>
-        <div class="content-note">
-            <div *ngFor="let item of dataNote">
-                <p>{{ item.DateTime }}: {{ item.Content }}</p>
+        <div class="card mt-2 ml-2 mb-2">
+            <div class="card-header">
+                <strong>Notes</strong>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item" *ngFor="let item of dataNote"><i>{{ item.DateTime }}</i>: {{ item.Content }}</li>
+            </ul>
+            <div class="card-footer text-muted p-0">
+                    <div class="note-box">
+                            <input type="text" placeholder="Type a note..." class="k-input" [(ngModel)]="note.Content"/>
+                            <button class="btn" style="background-color: white;" (click)="sendNote()">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
             </div>
         </div>
-        <div class="note-box">
-            <input type="text" placeholder="Type a note..." class="k-input" [(ngModel)]="note.Content"/>
-            <button class="btn" style="background-color: white;" (click)="sendNote()">
-                <i class="fas fa-paper-plane"></i>
-            </button>
-        </div>
+       
     </div>
 </div>

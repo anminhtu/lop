@@ -13,6 +13,7 @@ export class AvailableCaseDetailComponent implements OnInit {
   @ViewChild('detailTemplate')  detailTemplate : TemplateRef<any>;
   @ViewChild(GridComponent) grid;
   isWarningChecked = false
+  heightGrid:number=200;
   constructor() { }
 
   ngOnInit() {

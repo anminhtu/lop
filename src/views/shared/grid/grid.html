@@ -1,4 +1,4 @@
-<kendo-grid [data]="gridDataSource" [height]="height" [pageSize]="pageSize" [skip]="skip" [pageable]="pageable" (pageChange)="pageChange($event)">
+<kendo-grid [data]="gridDataSource" height="{{height}}" [pageSize]="pageSize" [skip]="skip" [pageable]="pageable" (pageChange)="pageChange($event)">
     
     <ng-template kendoGridToolbarTemplate *ngIf="headerTemplate!=null && !useHeaderDefault">
         <ng-container *ngTemplateOutlet="headerTemplate"></ng-container>

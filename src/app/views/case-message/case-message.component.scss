@@ -11,8 +11,10 @@
 .note-box{
     background-color: #ffffff;
     display: flex;
-    border: 1px solid rgba(0, 0, 0, 0.05);
     flex-direction: row;
     flex-wrap: nowrap;
-    padding: 10px 16px;
+    padding: 0 5px;
+}
+.k-chat{
+    border: none;
 }

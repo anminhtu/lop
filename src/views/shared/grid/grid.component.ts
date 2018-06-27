@@ -13,7 +13,7 @@ declare var bootbox:any;
   encapsulation: ViewEncapsulation.None
 })
 export class GridComponent implements OnInit, AfterContentInit{
-  height:number;
+  height:any;
   gridDataSource:any;
   gridColumns:any[]=[];
   skip: number=0;
@@ -38,7 +38,7 @@ export class GridComponent implements OnInit, AfterContentInit{
   @Input() inputUseHeaderDefault: boolean=true;
   @Input() inputUseActionDefault: boolean=true;
   @Input() inputPageable: boolean=true;
-  @Input() inputHeight: number;
+  @Input() inputHeight: any;
   
   
   @Output() extOnDataBound = new EventEmitter<any>();
