@@ -10,25 +10,51 @@
   <form name="formBase" class="form-base">
     <div class="card">
       <div class="card-header">
-        Drug Name
+
       </div>
       <div class="card-body">
-          <div>
-              Patient Information:
-              <br>
-              <ul>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="my-card ">
+              <div class="my-card-header">
+                <p style="margin-bottom: 0px;">Drug: XHair</p>
+              </div>
+              <div class="my-card-body">
+                <p style="margin-left: 10px; margin-bottom: 0px;">Duration: 12 month</p>
+                <p style="margin-left: 10px; margin-bottom: 0px;">Condition:</p>
+                <ul>
+                  <li>Age over 25 under 66</li>
+                  <li>Gender: Male</li>
+                  <li>Weight: Over 90 lbs</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="my-card">
+              <div class="my-card-header">
+                <p style="margin-bottom: 0px;">Patient Information:</p>
+              </div>
+              <div class="my-card-body">
+                <ul>
                   <li>Full name: Tom Ridder</li>
                   <li>Address: Houston</li>
                   <li>Phone: 016-2547-2658</li>
                   <li>Age: 25</li>
-              </ul>
-          </div>
-          <div>
-              <p>Allergies: abc, def, ghj</p>
+                  <li>Email: abc@caminos.com</li>
+                </ul>
+              </div>
+            </div>
           </div>
 
+        </div>
+
+        <div>
+          <!-- <p>Allergies: abc, def, ghj</p> -->
+        </div>
+
         <kendo-tabstrip>
-          <kendo-tabstrip-tab name="tab1"  [title]="'Questionnaire'" [selected]="true">
+          <kendo-tabstrip-tab name="tab1" [title]="'Questionnaire'" [selected]="true">
             <ng-template kendoTabContent>
               <app-case-question></app-case-question>
             </ng-template>

@@ -1,18 +1,25 @@
 <div class="row">
     <div class="col-sm-8">
-        <div class="k-card">            
-            <h5>Communication</h5>        
-            <kendo-chat style="width: 100%;"
-            [messages]="messages"
-            [user]="user"
-            (sendMessage)="sendMessage($event)"
-            >
-            </kendo-chat>            
+        <div class="k-card">
+            <h5>Communication</h5>
+            <kendo-chat style="width: 100%;" [messages]="messages" [user]="user" (sendMessage)="sendMessage($event)">
+            </kendo-chat>
         </div>
     </div>
     <div class="col-sm-4">
-            <div class="k-card">            
-                <h5>Notes</h5>                    
+        <div class="k-card">
+            <h5>Notes</h5>
+        </div>
+        <div class="content-note">
+            <div *ngFor="let item of dataNote">
+                <p>{{ item.DateTime }}: {{ item.Content }}</p>
             </div>
         </div>
+        <div class="note-box">
+            <input type="text" placeholder="Type a note..." class="k-input" [(ngModel)]="note.Content"/>
+            <button class="btn" style="background-color: white;" (click)="sendNote()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
 </div>
