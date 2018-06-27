@@ -15,10 +15,10 @@ export class AvailableCaseComponent implements OnInit {
   constructor() { }
   ngOnInit() {
     this.gridColumns=[
-      {Field:"No",Title:"No.",MinWidth:100},
+      {Field:"No",Title:"No.",Width:100},
       {Field:"PatientName",Title:"Patient Name",MinWidth:100},
       {Field:"Gender",Title:"Gender",Width:150},
-      {Field:"Age",Title:"Age",Width:250},
+      {Field:"Age",Title:"Age",Width:100},
       {Field:"Address",Title:"Address",Width:250},
       {Field:"DrugName",Title:"Drug Name",Width:250},
       {Field:"OrderDate",Title:"Order Date",Width:250},

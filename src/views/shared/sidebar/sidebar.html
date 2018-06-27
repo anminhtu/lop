@@ -2,23 +2,23 @@
 <!-- Sidebar -->
 <div class="sidebar-wrapper collapse show" id="sidebar-wrapper">
     <ul class="sidebar-nav">     
-        <li>
+        <li class="router.url.startsWith('/')?'active':''">
             <a [routerLink]="['/dashboard']"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
         </li>
-        <li>
-            <a [routerLink]="['/available-case']"><i class="fas fa-tachometer-alt"></i> Available Case</a>
+        <li class="router.url.startsWith('/')?'active':''">
+            <a [routerLink]="['/available-case']"><i class="far fa-folder"></i> Available Case</a>
         </li>
-        <li>
-            <a [routerLink]="['/my-case']"><i class="fas fa-tachometer-alt"></i> My Case</a>
+        <li class="router.url.startsWith('/')?'active':''">
+            <a [routerLink]="['/my-case']"><i class="far fa-address-card"></i> My Case</a>
         </li>
-        <li>
-            <a href="#"><i class="fas fa-tachometer-alt"></i> Comunication</a>
+        <li class="router.url.startsWith('/')?'active':''">
+            <a><i class="far fa-comment-alt"></i> Comunication</a>
         </li>
-        <li>
-            <a href="#"><i class="fas fa-tachometer-alt"></i> Billing</a>
+        <li class="router.url.startsWith('/')?'active':''">
+            <a><i class="far fa-money-bill-alt"></i> Billing</a>
         </li>
-        <li>
-            <a href="#"><i class="fas fa-tachometer-alt"></i> Setting</a>
+        <li class="router.url.startsWith('/')?'active':''">
+            <a><i class="fas fa-cogs"></i> Setting</a>
         </li>
         <!-- <li class="active">
             <a><i class="fas fa-cogs"></i> Administration</a>

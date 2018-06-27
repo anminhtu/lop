@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Router } from '@angular/router';
+import {Router,Event } from '@angular/router';
 declare var jQuery: any;
 
 @Component({
@@ -8,7 +8,11 @@ declare var jQuery: any;
   styleUrls: ['./sidebar.scss']
 })
 export class SidebarComponent {
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+    this.router.events.subscribe((data: Event) => {       
+      
+    });
+   }
   ngAfterContentInit() {
     var self = this;
     if(jQuery(window).width()<=575)

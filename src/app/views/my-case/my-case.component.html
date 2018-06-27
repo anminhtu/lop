@@ -5,7 +5,7 @@
 </nav>
 <div class="content">
     <pt-grid [inputGridDataSource]="gridDataSource" [inputGridColumns]="gridColumns" inputMasterName="User" (extOnPageChange)="onPageChange($event)" [inputUseActionDefault]="false"
-        class="custom-talbe" style="padding: 10px;" [inputHeaderTemplate]='true'></pt-grid>
+        class="custom-talbe" [inputHeaderTemplate]='true'></pt-grid>
 </div>
 <ng-template #actionActiveTemplate let-dataItem>
     <div class="text-center">
