@@ -1,0 +1,37 @@
+    
+    <div class="form-row">
+
+        <pt-textbox class="col-sm-4" id="Username" label="Username" required="true" [model]="Username"></pt-textbox>
+        <pt-textbox class="col-sm-4" id="Password" label="Password" required="true" [model]="Password" type="password"></pt-textbox>
+        <pt-textbox class="col-sm-4" id="ConfirmPassword" label="Confirm Password" required="true" [model]="ConfirmPassword" type="password"></pt-textbox>
+        
+        <pt-textbox class="col-sm-4" id="FirstName" label="First Name" required="true" [model]="FirstName"></pt-textbox>
+        <pt-textbox class="col-sm-4" id="MiddleName" label="Middle Name" [model]="MiddleName"></pt-textbox>
+        <pt-textbox class="col-sm-4" id="LastName" label="Last Name" required="true" [model]="LastName"></pt-textbox>
+
+        <pt-textbox class="col-sm-2" id="Address1" label="Address 1" [model]="Address1"></pt-textbox>
+        <pt-textbox class="col-sm-2" id="Address2" label="Address 2" [model]="Address2"></pt-textbox>
+        <pt-lookup class="col-sm-2" id="CountryId" label="Country" [model]="CountryId" url="Common/GetListCountriesTest" isAuthorize="false" bind="true" hierarchyKeyToSend="CountryId"></pt-lookup>
+        <pt-lookup class="col-sm-2" id="StateId" label="State" [model]="StateId" url="Common/GetListStatesByCountryIdTest" isAuthorize="false" hierarchyKeyToListen="CountryId"></pt-lookup>
+        <pt-textbox class="col-sm-2" id="City" label="City" [model]="City"></pt-textbox>
+        <pt-textbox class="col-sm-2" id="Zip" label="Zip" [model]="Zip"></pt-textbox>
+        
+        <pt-maskedtextbox class="col-sm-4" id="Phone" label="Phone" [model]="Phone" masked="(000) 000-0000"></pt-maskedtextbox>
+        <pt-textbox class="col-sm-4" id="Email" label="Email" required="true" [model]="Email" type="email"></pt-textbox>
+
+        <pt-textarea class="col-sm-4" id="Comment" label="Comment" required="true" [model]="Comment"></pt-textarea>
+        <pt-numerictextbox class="col-sm-4" id="Quantity" label="Quantity" [model]="Quantity"></pt-numerictextbox>
+        <!-- <pt-dropdownlist class="col-sm-2" id="Country1" label="Country1" [model]="Country1" url="Common/GetListCountriesTest" isAuthorize="false"></pt-dropdownlist> -->
+        <pt-dropdownlist class="col-sm-2" id="CountryId" label="Country1" [model]="CountryId1" url="Common/GetListCountriesTest" isAuthorize="false" bind="true" hierarchyKeyToSend="CountryId1"></pt-dropdownlist>
+        <pt-dropdownlist class="col-sm-2" id="StateId" label="State1" [model]="StateId1" url="Common/GetListStatesByCountryIdTest" isAuthorize="false" hierarchyKeyToListen="CountryId1"></pt-dropdownlist>
+      
+        <pt-autocomplete class="col-sm-4" id="AutocompleteId" label="Autocomplete" [model]="AutocompleteId" url="Common/GetListCountriesTest" isAuthorize="false" bind="false" hierarchyKeyToSend="AutocompleteId"></pt-autocomplete>
+        
+        <pt-datepicker class="col-sm-4" id="Datepicker" label="Datepicker" [model]="Datepicker" ></pt-datepicker>
+        <pt-datepicker class="col-sm-4" id="Datetimepicker" label="Datetimepicker" [model]="Datetimepicker" format="MM/dd/yyyy HH:mm a"></pt-datepicker>
+        <pt-daterange class="col-sm-8" idStart="DaterangeStart" labelStart="Start" [modelStart]="DaterangeStart"  idEnd="DaterangeEnd" labelEnd="End" [modelEnd]="DaterangeEnd" ></pt-daterange>
+        
+        <pt-timepicker class="col-sm-4" id="Timepicker" label="Timepicker" [model]="Timepicker" ></pt-timepicker>
+        <pt-upload class="col-sm-12" id="Upload" label="Upload" [model]="Upload" ></pt-upload>
+        
+    </div>

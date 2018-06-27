@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-sm-8">
+        <div class="k-card">            
+            <h5>Communication</h5>        
+            <kendo-chat style="width: 100%;"
+            [messages]="messages"
+            [user]="user"
+            (sendMessage)="sendMessage($event)"
+            >
+            </kendo-chat>            
+        </div>
+    </div>
+    <div class="col-sm-4">
+            <div class="k-card">            
+                <h5>Notes</h5>                    
+            </div>
+        </div>
+</div>

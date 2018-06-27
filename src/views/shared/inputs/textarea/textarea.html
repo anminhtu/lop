@@ -1,0 +1,13 @@
+<div class="form-row">
+    <div class="form-group {{_moreClass}} col-sm-12" *ngIf="!_horizontalForm">
+        <label for="{{_id}}">{{_label}} <span class="text-danger" *ngIf="_required">*</span></label>
+        <textarea rows="{{_rows}}" maxlength="{{_maxlength}}" class="form-control" kendoTextArea  id="{{_id}}" [readonly]="_readonly" [disabled]="_disabled" placeholder="{{_placeHolder}}" name="{{_id}}" [(ngModel)]="_model" [style.height.px]="_height" style="min-height: 38px !important;resize: vertical;"></textarea>
+    </div>
+
+    <div class="{{_moreClass}}" *ngIf="_horizontalForm">
+        <label for="{{_id}}" class="{{_classLabel}} col-form-label">{{_label}} <span class="text-danger" *ngIf="_required">*</span></label>
+        <div class="{{_classField}}">
+            <textarea rows="{{_rows}}" maxlength="{{_maxlength}}"  class="form-control" kendoTextArea id="{{_id}}" [readonly]="_readonly" [disabled]="_disabled" placeholder="{{_placeHolder}}" name="{{_id}}" [(ngModel)]="_model" [style.height.px]="_height"  style="min-height: 38px !important;resize: vertical;"></textarea>
+        </div>
+    </div>
+</div>

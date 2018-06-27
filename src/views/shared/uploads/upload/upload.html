@@ -1,0 +1,37 @@
+<div class="form-row">
+    <div class="form-group {{_moreClass}} col-sm-12" *ngIf="!_horizontalForm">
+        <label for="{{_id}}">{{_label}} <span class="text-danger" *ngIf="_required">*</span></label>
+        <kendo-upload  class="form-control"  id="{{_id}}" [disabled]="_disabled" name="{{_id}}" [(ngModel)]="_model"
+        [multiple]="_multiple" [batch]="_batch" [autoUpload]="_autoUpload" [saveUrl]="_uploadSaveUrl" [removeUrl]="_uploadRemoveUrl"
+        [saveField]="multipart/form-data"
+        [restrictions]="_uploadRestrictions"
+        (select)="selectEventHandler($event)"
+        (clear)="clearEventHandler($event)"
+        (remove)="removeEventHandler($event)"
+        (complete)="completeEventHandler($event)"
+        (upload)="uploadEventHandler($event)">    
+        <ng-template kendoUploadFileTemplate  let-files let-state="state" *ngIf="_template">
+            <ng-container *ngTemplateOutlet="_template"></ng-container>
+        </ng-template>
+    </kendo-upload>        
+    </div>
+
+    <div class="{{_moreClass}}" *ngIf="_horizontalForm">
+        <label for="{{_id}}" class="{{_classLabel}} col-form-label">{{_label}} <span class="text-danger" *ngIf="_required">*</span></label>
+        <div class="{{_classField}}">            
+            <kendo-upload  class="form-control" [(ngModel)]="_model" id="{{_id}}" [disabled]="_disabled" name="{{_id}}"            
+        [multiple]="_multiple" [batch]="_batch" [autoUpload]="_autoUpload" [saveUrl]="_uploadSaveUrl" [removeUrl]="_uploadRemoveUrl"
+
+        [restrictions]="_uploadRestrictions"
+        (select)="selectEventHandler($event)"
+        (clear)="clearEventHandler($event)"
+        (remove)="removeEventHandler($event)"
+        (complete)="completeEventHandler($event)"
+        (upload)="uploadEventHandler($event)">
+        <ng-template kendoUploadFileTemplate  let-files let-state="state" *ngIf="_template">
+            <ng-container *ngTemplateOutlet="_template"></ng-container>
+        </ng-template>
+    </kendo-upload>
+        </div>
+    </div>
+</div>

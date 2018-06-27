@@ -1,0 +1,58 @@
+.navbar{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    .navbar-brand{
+        padding:0;
+        width: 200px;
+        img{
+            height: 50px;
+        }
+    }
+    .acount-info{
+        button{
+            padding: 0;
+            background: none;
+            border:none;
+            color: #fff;
+            &:focus{
+                box-shadow: none;
+                background: none;
+            }
+        }
+        img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .dropdown-menu{
+            margin-left: -90px;
+        }
+    }
+    h1{
+        color:#fff;
+        font-size: 25px;
+        text-transform: uppercase;
+    }
+}
+
+.status {
+    border-color: #d96557;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    padding: 2px;
+    overflow: hidden;
+    width: 10px;
+    height: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    line-height: .245;
+    border-width: 2px;
+    /* top: 15px; */
+    right: -5px;
+    border-style: solid;
+}

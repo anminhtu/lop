@@ -1,0 +1,27 @@
+<div class="form-row">
+    <div class="form-group {{_moreClass}} col-sm-12" *ngIf="!_horizontalForm">
+        <label for="{{_id}}">{{_label}} <span class="text-danger" *ngIf="_required">*</span></label>
+        <kendo-autocomplete  class="form-control" [data]="_data" [(ngModel)]="_model" [filterable]="_filterable" [valueField]="_valueField"
+        id="{{_id}}" [readonly]="_readonly" [disabled]="_disabled" name="{{_id}}" 
+        (valueChange)="valueChange($event)"
+        (filterChange)="filterChange($event)"
+        (open)="open()"
+        (close)="close()"
+        (focus)="focus()"
+        (blur)="blur()"></kendo-autocomplete>        
+    </div>
+
+    <div class="{{_moreClass}}" *ngIf="_horizontalForm">
+        <label for="{{_id}}" class="{{_classLabel}} col-form-label">{{_label}} <span class="text-danger" *ngIf="_required">*</span></label>
+        <div class="{{_classField}}">
+            <kendo-autocomplete  class="form-control" [data]="_data" [(ngModel)]="_model" [filterable]="_filterable"  [valueField]="_valueField"
+            id="{{_id}}" [readonly]="_readonly" [disabled]="_disabled" name="{{_id}}" 
+            (valueChange)="valueChange($event)"
+            (filterChange)="filterChange($event)"
+            (open)="open()"
+            (close)="close()"
+            (focus)="focus()"
+            (blur)="blur()"></kendo-autocomplete>  
+        </div>
+    </div>
+</div>

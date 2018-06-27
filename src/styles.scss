@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+/* using scss */
+
+@import "~@progress/kendo-theme-bootstrap/scss/all";
+@import "~bootstrap/scss/bootstrap";
+@import 'node_modules/angular2-toaster/src/toaster';
+
+a,button{
+    &:hover{
+        cursor: pointer;
+    }
+}
+.p0{
+    padding:0;
+}
+.breadcrumb{
+    border-radius: 0 !important;
+    margin:0;
+    height: 48px;
+    overflow: hidden;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.input-group-append{
+    .btn{                
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        &.dropdown-toggle{
+            border-radius: 0;
+            border-radius: 0;
+        }
+    }
+}
+.form-base{
+    .card{
+        border-radius: 0;
+        border: none;
+    }
+    .card-body{
+        overflow-y: auto;
+    }
+}

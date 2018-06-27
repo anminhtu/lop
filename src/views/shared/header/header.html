@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" (click)="redirectUrl('/aa')">
+        <img src="../assets/images/logo.png" alt="Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebar-wrapper" aria-controls="sidebar-wrapper"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse">
+        <div class="mr-auto">
+            <h1>Application DEMO V1</h1>
+        </div>
+        <div class="mr-sm-2">
+            <div class="btn-group acount-info" role="group">
+                <button id="btnGroupNotify1" type="button" class="btn btn-light" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                    <i class="far fa-comment-dots fa-lg"></i>
+                    <div class="status bg-danger border-danger animated bounce"></div>
+                </button>
+                <div class="dropdown-menu p0" aria-labelledby="btnGroupNotify1">
+                    <div class="card" style="width: 18rem;">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a>Person 1: "Hello"</a></li>
+                            <li class="list-group-item"><a>Person 2: "This is my book"</a></li>
+                            <li class="list-group-item"><a>Person 3: "Hello word"</a></li>
+                          
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mr-sm-2">
+            <div class="btn-group acount-info" role="group">
+                <button id="btnGroupNotify" type="button" class="btn btn-light" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                    <i class="fa fa-bell fa-lg"></i>
+                </button>
+                <div class="dropdown-menu p0" aria-labelledby="btnGroupNotify">
+                    <div class="card" style="width: 18rem;">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a>>Cras justo odio</a></li>
+                            <li class="list-group-item"><a>>Dapibus ac facilisis in</a></li>
+                            <li class="list-group-item"><a>>Vestibulum at eros</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mr-sm-2">
+            <div class="btn-group acount-info" role="group">
+                <button id="btnGroupAccount" type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <img src="../assets/images/avatar.png" alt="Logo">
+                </button>
+                <div class="dropdown-menu" aria-labelledby="btnGroupAccount">
+                    <a class="dropdown-item" href="#">
+                        <i class="far fa-user"></i> My profile</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">
+                        <i class="fas fa-sign-out-alt"></i> Log off</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

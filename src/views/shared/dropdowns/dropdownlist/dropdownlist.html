@@ -1,0 +1,31 @@
+<div class="form-row">
+    <div class="form-group {{_moreClass}} col-sm-12" *ngIf="!_horizontalForm">
+        <label for="{{_id}}">{{_label}} <span class="text-danger" *ngIf="_required">*</span></label>
+        <kendo-dropdownlist  class="form-control" [data]="_data" [(ngModel)]="_model" [filterable]="_filterable" [textField]="_textField" [valueField]="_valueField"
+        [defaultItem]="_defaultItem" [valuePrimitive]="_valuePrimitive"
+        id="{{_id}}" [readonly]="_readonly" [disabled]="_disabled" name="{{_id}}" 
+        (valueChange)="valueChange($event)"
+        (selectionChange)="selectionChange($event)"
+        (filterChange)="filterChange($event)"
+        (open)="open()"
+        (close)="close()"
+        (focus)="focus()"
+        (blur)="blur()"></kendo-dropdownlist>        
+    </div>
+
+    <div class="{{_moreClass}}" *ngIf="_horizontalForm">
+        <label for="{{_id}}" class="{{_classLabel}} col-form-label">{{_label}} <span class="text-danger" *ngIf="_required">*</span></label>
+        <div class="{{_classField}}">
+            <kendo-dropdownlist  class="form-control" [data]="_data" [(ngModel)]="_model" [filterable]="_filterable" [textField]="_textField" [valueField]="_valueField"
+            [defaultItem]="_defaultItem" [valuePrimitive]="_valuePrimitive"
+            id="{{_id}}" [readonly]="_readonly" [disabled]="_disabled" name="{{_id}}" 
+            (valueChange)="valueChange($event)"
+            (selectionChange)="selectionChange($event)"
+            (filterChange)="filterChange($event)"
+            (open)="open()"
+            (close)="close()"
+            (focus)="focus()"
+            (blur)="blur()"></kendo-dropdownlist>  
+        </div>
+    </div>
+</div>

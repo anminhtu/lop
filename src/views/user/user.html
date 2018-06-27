@@ -1,0 +1,14 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">User</li>
+    </ol>
+</nav>
+<div class="content">
+    <pt-grid [inputGridDataSource]="gridDataSource" [inputGridColumns]="gridColumns" inputMasterName="User"  (extOnPageChange)="onPageChange($event)"></pt-grid>
+</div>
+<ng-template #actionActiveTemplate  let-dataItem>    
+    <div class="text-center">
+        <button (click)="active(dataItem.Id)" class="btn btn-primary" *ngIf="dataItem.Active">Active</button>
+        <button (click)="active(dataItem.Id)" class="btn btn-danger" *ngIf="!dataItem.Active">Inactive</button>
+    </div>
+</ng-template>

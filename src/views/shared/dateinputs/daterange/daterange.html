@@ -1,0 +1,28 @@
+<div class="form-row">
+    <div class="form-group {{_moreClass}} col-sm-12" *ngIf="!_horizontalForm">
+        <kendo-daterange class="form-row">
+            <div class="col-sm-6">
+                <label class="label">{{_labelStart}} <span class="text-danger" *ngIf="_required">*</span></label>
+                <kendo-dateinput  kendoDateRangeStartInput class="form-control" [readonly]="_readonly" [disabled]="_disabled" id="{{_idStart}}"  [format]="_format" [min]="_minStart" [max]="_maxStart" [(ngModel)]="_modelStart"></kendo-dateinput>
+            </div>
+            <div class="col-sm-6">
+                <label class="label">{{_labelEnd}} <span class="text-danger" *ngIf="_required">*</span></label>
+                <kendo-dateinput kendoDateRangeEndInput class="form-control" [readonly]="_readonly" [disabled]="_disabled" id="{{_idEnd}}"  [format]="_format" [min]="_minEnd" [max]="_maxEnd" [(ngModel)]="_modelEnd"></kendo-dateinput>
+            </div>
+        </kendo-daterange> 
+    </div>
+
+    <kendo-daterange class="{{_moreClass}}" *ngIf="_horizontalForm" style="width:calc(100% - 5px)">  
+        <div class="form-row">
+            <label for="{{_idStart}}" class="{{_classLabel}} col-form-label">{{_labelStart}} <span class="text-danger" *ngIf="_required">*</span></label>
+            <div class="{{_classField}}">            
+                <kendo-dateinput kendoDateRangeStartInput class="form-control" [readonly]="_readonly" [disabled]="_disabled" id="{{_idStart}}"  [format]="_format" [min]="_minStart" [max]="_maxStart" [(ngModel)]="_modelStart"></kendo-dateinput>
+            </div>
+            
+            <label for="{{_idEnd}}" class="{{_classLabel}} col-form-label">{{_labelEnd}} <span class="text-danger" *ngIf="_required">*</span></label>
+            <div class="{{_classField}}">            
+                <kendo-dateinput kendoDateRangeEndInput class="form-control" [readonly]="_readonly" [disabled]="_disabled" id="{{_idEnd}}" [format]="_format" [min]="_minEnd" [max]="_maxEnd" [(ngModel)]="_modelEnd"></kendo-dateinput>
+            </div>
+        </div> 
+    </kendo-daterange>
+</div>

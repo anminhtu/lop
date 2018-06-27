@@ -1,0 +1,52 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a [routerLink]="['/available-case']">Case</a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">001</li>
+  </ol>
+</nav>
+<div class="content">
+  <form name="formBase" class="form-base">
+    <div class="card">
+      <div class="card-header">
+        Drug Name
+      </div>
+      <div class="card-body">
+          <div>
+              Patient Information:
+              <br>
+              <ul>
+                  <li>Full name: Tom Ridder</li>
+                  <li>Address: Houston</li>
+                  <li>Phone: 016-2547-2658</li>
+                  <li>Age: 25</li>
+              </ul>
+          </div>
+          <div>
+              <p>Allergies: abc, def, ghj</p>
+          </div>
+
+        <kendo-tabstrip>
+          <kendo-tabstrip-tab name="tab1"  [title]="'Questionnaire'" [selected]="true">
+            <ng-template kendoTabContent>
+              <app-case-question></app-case-question>
+            </ng-template>
+          </kendo-tabstrip-tab>
+          <kendo-tabstrip-tab name="tab2" [title]="'Photos'">
+            <ng-template kendoTabContent>
+              <app-case-photo></app-case-photo>
+            </ng-template>
+          </kendo-tabstrip-tab>
+          <kendo-tabstrip-tab name="tab3" [title]="'Communication'" style="overflow-x:hidden; ">
+            <ng-template kendoTabContent>
+              <app-case-message></app-case-message>
+            </ng-template>
+          </kendo-tabstrip-tab>
+        </kendo-tabstrip>
+
+      </div>
+    </div>
+
+  </form>
+</div>

@@ -1,0 +1,13 @@
+<pt-grid [inputUseHeaderDefault]="false" [inputPageable]="false" [inputUseActionDefault]="false" [inputGridDataSource]="gridDataSource"
+  [inputGridColumns]="gridColumns" inputMasterName="Question" (extOnPageChange)="onPageChange($event)"></pt-grid>
+<ng-template #detailTemplate let-dataItem>
+    <span style="font-weight: bold">{{dataItem.Question}}</span><br/>
+    <span [ngClass]="{'warningText': dataItem.IsWaring}">{{dataItem.Answer}}</span><br/>
+    <div *ngIf="dataItem.SubAnswer != null" style="padding-left:20px; border-top: 1px solid #e4e6e8;">
+        <ng-template ngFor let-subItem [ngForOf]="dataItem.SubAnswer">
+            <span style="font-weight: bold">{{subItem.Question}}</span><br/>
+            <span >{{subItem.Answer}}</span><br/>
+        </ng-template>              
+    </div>
+    <a>Add Question</a>
+</ng-template>

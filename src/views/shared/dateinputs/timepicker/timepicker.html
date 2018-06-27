@@ -1,0 +1,33 @@
+<div class="form-row">
+    <div class="form-group {{_moreClass}} col-sm-12" *ngIf="!_horizontalForm">
+        <label for="{{_id}}">{{_label}} <span class="text-danger" *ngIf="_required">*</span></label>
+        <kendo-timepicker   class="form-control"  [(ngModel)]="_model"
+          id="{{_id}}" [readonly]="_readonly" [disabled]="_disabled" name="{{_id}}"
+         [format]="_format"
+         [min]="_min"
+         [max]="_max"
+         
+         (blur)="onBlur()"
+         (focus)="onFocus()"
+         (open)="onOpen()"
+         (close)="onClose()"
+         (valueChange)="onChange($event)"></kendo-timepicker>        
+    </div>
+
+    <div class="{{_moreClass}}" *ngIf="_horizontalForm">
+        <label for="{{_id}}" class="{{_classLabel}} col-form-label">{{_label}} <span class="text-danger" *ngIf="_required">*</span></label>
+        <div class="{{_classField}}">            
+            <kendo-timepicker   class="form-control" [(ngModel)]="_model" 
+             id="{{_id}}" [readonly]="_readonly" [disabled]="_disabled" name="{{_id}}"
+            [format]="_format"
+            [min]="_min"
+            [max]="_max"
+            
+            (blur)="onBlur()"
+            (focus)="onFocus()"
+            (open)="onOpen()"
+            (close)="onClose()"
+            (valueChange)="onChange($event)"></kendo-timepicker>
+        </div>
+    </div>
+</div>

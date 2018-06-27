@@ -1,0 +1,14 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"> my-case works!</li>
+    </ol>
+</nav>
+<div class="content">
+    <pt-grid [inputGridDataSource]="gridDataSource" [inputGridColumns]="gridColumns" inputMasterName="User" (extOnPageChange)="onPageChange($event)" [inputUseActionDefault]="false"
+        class="custom-talbe" style="padding: 10px;" [inputHeaderTemplate]='true'></pt-grid>
+</div>
+<ng-template #actionActiveTemplate let-dataItem>
+    <div class="text-center">
+        <button class="btn btn-primary" [routerLink]="['/my-case-detail']">View</button>
+    </div>
+</ng-template>

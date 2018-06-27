@@ -1,0 +1,48 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a [routerLink]="['/available-case']">Case</a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">001</li>
+  </ol>
+</nav>
+<div class="content">
+  <form name="formBase" class="form-base">
+    <div class="card">
+      <div class="card-header">
+        Drug Name
+      </div>
+      <div class="card-body">
+        <div>
+          Patient Information:
+          <br>
+          <ul>
+              <li>Full name: Tom Ridder</li>
+              <li>Address: Houston</li>
+              <li>Phone: 016-2547-2658</li>
+              <li>Age: 25</li>
+          </ul>
+      </div>
+      <div>
+          <p>Allergies: abc, def, ghj</p>
+      </div>
+
+        <div style="display: inline-block; width: 100%">
+          <h5 style="width: fit-content; float: left;">Questionnaire</h5>
+          <div class="k-form-field" style="margin-top: 3px;">
+            <input type="checkbox" id="ch1" class="k-checkbox" name="ch1" [(ngModel)]="isWarningChecked" (change)="checkWarning()" />
+            <label class="k-checkbox-label" for="ch1" style="margin-left: 8px">Warning</label>
+          </div>
+        </div>
+
+        <pt-grid [inputUseHeaderDefault]="false" [inputPageable]="false" [inputUseActionDefault]="false" [inputGridDataSource]="gridDataSource"
+          [inputGridColumns]="gridColumns" inputMasterName="Question" (extOnPageChange)="onPageChange($event)"></pt-grid>
+        <ng-template #detailTemplate let-dataItem>
+          <p>{{dataItem.Question}}</p>
+          <span [ngClass]="{'warningText': dataItem.IsWaring}">{{dataItem.Answer}}</span>
+        </ng-template>
+      </div>
+    </div>
+
+  </form>
+</div>

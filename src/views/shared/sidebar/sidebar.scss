@@ -1,0 +1,129 @@
+$white:#ffffff;
+$gray: #999999;
+$gray1:#d2dde6;
+$gray2:#7f8fa4;
+$gray3:#F2F2F8;
+$blue:#007BFF;
+$blue-hover:#007BFF;
+$orange: #feab21;
+$orange-hover:#eb9301;
+$black:#000000;
+$black1:#374254;
+.sidebar-wrapper {
+	z-index: 1000;
+	width: 0;
+	height: 500px;
+	overflow-y: auto;
+	background: $white;
+	-webkit-transition: all 0.1s ease;
+	-moz-transition: all 0.1s ease;
+	-o-transition: all 0.1s ease;
+    transition: all 0.1s ease;
+    border-right: 1px solid $gray1;
+    overflow: hidden;
+    float: left;
+    &.collapse{
+        &.show{
+            width: 220px;
+        }
+    }
+    .sidebar-nav {
+        width: 220px;
+        margin: 0;
+        height: calc(100% - 72px);
+        padding: 0;
+        list-style: none;
+        overflow-y: auto;
+        @media (max-width: 767px)
+        {
+            top:72px;
+            height: calc(100% - 52px);
+        }   
+        li {
+            text-indent: 20px;
+            line-height: 40px;
+            
+            a {
+                display: block;
+                text-decoration: none;
+                color: $gray2;
+                font-weight: 600;
+                border-left:2px solid $white;
+                &:hover {
+                    text-decoration: none;
+                    color: $blue;
+                    border-left:2px solid $blue;
+                }
+                &:focus {
+                    text-decoration: none;
+                }
+                i{
+                    text-indent: 0;
+                    margin-right: 10px;
+                }
+            }
+            ul{
+                margin:0;
+                padding:0;
+                padding-left: 30px;
+                display: none;
+                li{
+                    list-style: none;
+                    a{
+                        border-left:0;
+                    }
+                }
+            }
+            &:hover{    
+                a{
+                    text-decoration: none;
+                    color: $blue;
+                    border-left:2px solid $blue;
+                }           
+                ul{
+                    display: block;
+                    li{
+                        a{                            
+                            color: $gray2;
+                            border-left: none;
+
+                            &:hover {
+                                text-decoration: none;
+                                color: $blue;
+                            }
+                        }
+                    }
+                }
+            }
+            &.active {
+                a{
+                    text-decoration: none;
+                    color: $black1;
+                    border-left:2px solid $blue;
+                    span{
+                        color:$blue;
+                    }
+                }
+                ul{
+                    display: block !important;
+                    li{
+                        a{
+                            color: $gray2;
+                            border-left: none;
+                            &.active-sub{
+                                text-decoration: none;
+                                color: $blue;
+                            }
+                        }
+                    }
+                }
+            }
+            hr{
+                margin:10px 15px;
+            }
+            .title-menu{
+                font-size: 12px;
+            }
+        }
+    }
+}

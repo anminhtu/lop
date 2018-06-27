@@ -1,0 +1,14 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"> Available-case works!</li>
+    </ol>
+</nav>
+<div class="content">
+    <pt-grid [inputGridDataSource]="gridDataSource" [inputGridColumns]="gridColumns" inputMasterName="User" [inputUseActionDefault]="false" [inputHeaderTemplate]='true'
+        (extOnPageChange)="onPageChange($event)" class="custom-talbe" style="padding: 10px;"></pt-grid>
+</div>
+<ng-template #actionActiveTemplate let-dataItem>
+    <div class="text-center">
+        <button class="btn btn-primary"  [routerLink]="['/available-case-detail']">View</button>
+    </div>
+</ng-template>

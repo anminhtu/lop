@@ -1,0 +1,9 @@
+pt-lookup{
+    .k-combobox {
+        &.form-control {
+            .k-dropdown-wrap{
+                border:none;
+            }
+        }
+    }
+}
