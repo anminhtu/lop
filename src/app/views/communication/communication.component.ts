@@ -20,7 +20,8 @@ export class CommunicationComponent implements OnInit,AfterContentInit {
   public messages: Message[] = [
   {
     author: this.user,
-    text: 'Alo!'
+    text: 'Alo!',
+    timestamp: new Date()
   }];
 
   public sendMessage(e: SendMessageEvent): void {
