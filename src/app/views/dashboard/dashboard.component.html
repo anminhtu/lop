@@ -1,3 +1,33 @@
-<p>
-  dashboard works
-</p>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"> Dashboard</li>
+  </ol>
+</nav>
+<div class="content">
+  <div class="row">
+    <div class="col-sm-6">
+      <h6>Availble Case</h6>
+      <pt-grid [inputUseHeaderDefault]="false" [inputPageable]="false" [inputUseActionDefault]="false" [inputGridDataSource]="gridAvailbleDataSource"
+        [inputGridColumns]="gridAvailbleColumns" inputMasterName="Availble"></pt-grid>
+    </div>
+    <div class="col-sm-6">
+        <h6>My Case</h6>
+        <pt-grid [inputUseHeaderDefault]="false" [inputPageable]="false" [inputUseActionDefault]="false" [inputGridDataSource]="gridMyDataSource"
+          [inputGridColumns]="gridMyColumns" inputMasterName="My"></pt-grid>
+    </div>
+  </div>
+  <ng-template #patientDetail let-dataItem>
+      <span>{{dataItem.PatientName}}</span><br/>
+      <span>Gender: {{dataItem.Gender}}, Age: {{dataItem.Age}}</span><br/>
+  </ng-template>
+  <ng-template #actionAvailble let-dataItem>
+      <div class="text-center">
+          <button class="btn btn-primary" [routerLink]="['/available-case-detail']">View</button>
+      </div>
+  </ng-template>
+  <ng-template #actionMy let-dataItem>
+      <div class="text-center">
+          <button class="btn btn-primary" [routerLink]="['/my-case-detail']">View</button>
+      </div>
+  </ng-template>
+</div>
