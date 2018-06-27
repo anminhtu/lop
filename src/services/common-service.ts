@@ -62,6 +62,10 @@ export class CommonService {
         var monthstr = month < 10 ? '0' + month : month;
         return monthstr + "/" + datestr + "/" + datetime.getFullYear();
     }
+    static formatDatetime(datetime:Date):string {
+       
+        return this.formatDate(datetime)+" "+this.formatTime(datetime);
+    }
     static isValidTime(time:any):boolean {
         var dateReg = /^(1[012]|0[1-9]):[0-5][0-9](\\s)? (AM|PM)+$/;
         if (!dateReg.test(this.formatTime(new Date(time.toString())))) {
