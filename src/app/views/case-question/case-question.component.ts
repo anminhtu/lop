@@ -24,38 +24,57 @@ export class CaseQuestionComponent implements OnInit {
     this.items=[
       {
         "No": "1",
-        "Question": "How long ago did you first notice any signs of hair loss?",
-        "IsWaring": true,
-        "Answer": "6",
-        "SubAnswer" : [
-            {
-                "Question": "sub question 1?",
-                "Answer": "12"
-            }
-        ]
+        "Question": "How may we help you today?",
+        "Answer": "Start ED or PE treatment"
     },
     {
         "No": "2",
-        "Question": "What symptoms of hair loss have you noticed?",
-        "Answer": "Thinning at the front of hairline"
+        "Question": "What are the symptoms that you currently having?",
+        "Answer": " Problems maintaining an erection during masturbation"
     },{
         "No": "3",
-        "Question": "What treatments have you already tried?",
+        "Question": "When are you having trouble maintaining your erection?",
         "IsWaring": true,
-        "Answer": "None"
+        "Answer": "With Alcohol, When stressed"
     },{
         "No": "4",
-        "Question": "Do other people in your family have hair loss?",
-        "Answer": "Yes"
+        "Question": "How long ago did you notice that you could not maintain or have an erection?",
+        "Answer": "Less than 1 month"
     },{
         "No": "5",
-        "Question": "What relatives have hair loss?",
-        "Answer": "Father's side"
+        "Question": "Do you still have interest in having sex?",
+        "Answer": "No",
+        "IsWaring": true,
+        "SubAnswer" : [
+            {
+                "Question": "Please explain?",
+                "Answer": "abc xyz"
+            }
+        ]
     },{
         "No": "6",
-        "Question": "Do you have any issues with sexual dysfunction currently?",
-        "IsWaring": true,
-        "Answer": "No, not experiencing any sexual dysfunction"
+        "Question": "Any new stressors, or life changes?",
+        "Answer": "Not sure"
+    },{
+        "No": "7",
+        "Question": "Have you had a Blood pressure reading in the last 30 days?",
+        "Answer": "Yes"
+    },{
+        "No": "8",
+        "Question": "What is your current weight?",
+        "Answer": "100"
+    },{
+        "No": "9",
+        "Question": "Do you currently smoke?",
+        "Answer": "Yes"
+    },{
+        "No": "10",
+        "Question": "How many cig per day?",
+        "Answer": "Half pack per day"
+    },{
+        "No": "11",
+        "Question": "Have you had any surgeries?",
+        "Answer": "No"
     }];
     this.gridDataSource={
       data:this.items,
