@@ -49,7 +49,7 @@ import { AvailableCaseDetailComponent } from './views/available-case-detail/avai
 import { CaseQuestionComponent } from './views/case-question/case-question.component';
 import { CasePhotoComponent } from './views/case-photo/case-photo.component';
 import { CaseMessageComponent } from './views/case-message/case-message.component';
-
+import { CommunicationComponent } from './views/communication/communication.component';
 
 
 
@@ -85,7 +85,8 @@ import { CaseMessageComponent } from './views/case-message/case-message.componen
     AvailableCaseDetailComponent,
     CaseQuestionComponent,
     CasePhotoComponent,
-    CaseMessageComponent
+    CaseMessageComponent,
+    CommunicationComponent,
   ],
   imports: [
     BrowserModule,
